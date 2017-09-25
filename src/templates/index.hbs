@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W drodze</title>
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--endbuild-->
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="#">{{ title }}</a>
+        </h1>
+    </header>
+    <main>
+        <ul>
+            {{#each pages }}
+            <li>
+                <a href="{{ url }}">
+          {{ title }}
+        </a>
+            </li>
+            {{/each}}
+        </ul>
+    </main>
+    <!--build:js js/script.min.js -->
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
