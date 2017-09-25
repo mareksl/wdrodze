@@ -1,0 +1,38 @@
+{
+  "name": "wdrodze",
+  "version": "1.0.0",
+  "description": "W drodze",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mareksl/wdrodze.git"
+  },
+  "author": "mareksl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mareksl/wdrodze/issues"
+  },
+  "homepage": "https://github.com/mareksl/wdrodze#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-markdown": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify-es": "^0.1.3",
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.8",
+    "handlebars": "^4.0.10",
+    "path": "^0.12.7",
+    "rename": "^1.0.4",
+    "run-sequence": "^2.2.0",
+    "underscore": "^1.8.3"
+  }
+}

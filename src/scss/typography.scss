@@ -1,0 +1,73 @@
+$sans: sans-serif;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: black; //VARIABLE
+    font-family: $sans;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $sans;
+}
+
+h1 {
+    font-size: 5.61em;
+}
+
+h2 {
+    font-size: 4.209em;
+}
+
+h3 {
+    font-size: 3.157em;
+}
+
+h4 {
+    font-size: 2.369em;
+}
+
+h5 {
+    font-size: 1.777em;
+}
+
+h6 {
+    font-size: 1.333em;
+}
+
+p {
+    font-size: 1em; // max-width: 32rem;
+    padding: .4rem 0;
+}
+
+small {
+    font-size: .8em;
+    color: grey; //VARIABLE
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    font-style: italic;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
