@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ title }}</title>
+    <title>9. spotkanie</title>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="../css/main.css">
     <!--endbuild-->
@@ -21,20 +21,12 @@
         <main class="main">
             <article class="page-event">
                 <header>
-                    <h2>{{ title }}</h2>
-                    {{#if subtitle}}
-                    <p>{{ subtitle }}</p>{{/if}}
-                    <p>{{#if date}}
-                        <time datetime="{{ date }}">{{ date }}</time>{{else}}Brak daty{{/if}}</p>
+                    <h2>9. spotkanie</h2>
+
+                    <p>Brak daty</p>
                 </header>
-                {{{ contents }}} {{#if artists}}
-                <h3>Artyści</h3>
-                <ul class="artists">
-                    {{#each artists}}
-                    <li>{{!--<a href="artists/{{#encodeURI}}{{this}}{{/encodeURI}}.html"> --}}{{this}}{{!..</a>--}}</li>
-                    {{/each}}
-                </ul>
-                {{/if}}</article>
+                <p>Hello. This is a <strong>test page</strong>!</p>
+ </article>
         </main>
         <footer class="footer"><a href="../">Strona główna</a></footer>
     </div>
