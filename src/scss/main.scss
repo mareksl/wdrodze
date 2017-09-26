@@ -68,9 +68,11 @@ body {
 .previous-events__list {
     li {
         display: flex;
-        justify-content: space-between;
+        flex-flow: column;
+        // justify-content: space-between;
         white-space: nowrap;
-        border-bottom: 1px dotted grey;
+        margin-bottom: 1rem;
+        // border-bottom: 1px solid grey;
     }
 }
 
