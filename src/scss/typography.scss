@@ -1,17 +1,19 @@
-$sans: sans-serif;
-
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700|PT+Sans:700|PT+Serif');
+$heading: 'PT Sans Narrow';
+$subheading: 'Pt Sans';
+$text: 'Pt Serif';
+$color-body: #2f2f2f;
 html {
     font-size: 16px;
 }
 
 body {
-    color: black; //VARIABLE
-    font-family: $sans;
+    color: $color-body;
+    font-family: $text;
     font-weight: 400;
     font-size: 100%;
     line-height: 1.5;
 }
-
 
 h1,
 h2,
@@ -19,35 +21,39 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $sans;
+    font-family: $subheading;
+    font-weight: 900;
 }
 
 h1 {
-    font-size: 5.61em;
+    font-size: calc(0.5 * 5.61em);
+    font-family: $heading;
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: 4.209em;
+    font-size: calc(0.5 * 4.209em);
 }
 
 h3 {
-    font-size: 3.157em;
+    font-size: calc(0.5 * 3.157em);
 }
 
 h4 {
-    font-size: 2.369em;
+    font-size: calc(0.5 * 2.369em);
 }
 
 h5 {
-    font-size: 1.777em;
+    font-size: calc(0.5 * 1.777em);
 }
 
 h6 {
-    font-size: 1.333em;
+    font-size: calc(0.5 * 1.333em);
 }
 
 p {
-    font-size: 1em; // max-width: 32rem;
+    font-size: 1em;
+    max-width: 32rem;
     padding: .4rem 0;
 }
 
@@ -57,7 +63,15 @@ small {
 }
 
 a {
+    outline: none;
     text-decoration: none;
+    color: darkred;
+    &:visited {
+        color: darkred;
+    }
+    &:hover, &:focus {
+        color: red;
+    }
 }
 
 i {
