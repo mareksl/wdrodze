@@ -12,22 +12,45 @@
 </head>
 
 <body>
-    <header>
-        <h1>
-            <a href="#">{{ title }}</a>
-        </h1>
-    </header>
-    <main>
-        <ul>
-            {{#each pages }}
-            <li>
-                <a href="{{ url }}">
-          {{ title }}
-        </a>
-            </li>
-            {{/each}}
-        </ul>
-    </main>
+    <div class="wrapper">
+        <header class="header">
+            <a href="#">
+                <h1>W Drodze</h1>
+            </a>
+        </header>
+        <main class="main">
+            <article class="latest-event">
+                <header>
+                    <h2>Najnowsze wydarzenie</h2>
+                    {{#with pages.[0]}}
+                    <a href="{{ url }}">{{ title }}</a>
+                    <p>{{#if date}}
+                        <time datetime="{{ date }}">{{ date }}</time>
+                        {{else}}Brak daty{{/if}}</p>
+                </header>{{{ contents }}} {{#if artists}}
+                <h3>Artyści</h3>
+                <ul class="latest-event__artists">
+                    {{#each artists}}
+                    <li>{{!--<a href="artists/{{#encodeURI}}{{this}}{{/encodeURI}}.html"> --}}{{this}}{{!..</a>--}}</li>
+                    {{/each}}
+                </ul>
+                {{/if}} {{/with}}
+            </article>
+            <aside class="previous-events">
+                <h2>Poprzednie wydarzenia</h2>
+                <ul class="previous-events__list">
+                    {{#each pages }} {{#unless @first}}
+                    <a href="{{ url }}">
+                        <li>
+                            <span>{{#if date}}{{date}}{{else}}Brak daty{{/if}}: </span><span>{{ title }}</span>
+                        </li>
+                    </a>
+                    {{/unless}} {{/each}}
+                </ul>
+            </aside>
+        </main>
+        <footer class="footer">Marek Sładczyk 2017</footer>
+    </div>
     <!--build:js js/script.min.js -->
     <script src="js/main.js"></script>
     <!-- endbuild -->

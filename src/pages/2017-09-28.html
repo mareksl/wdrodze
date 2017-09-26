@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ title }}</title>
+    <title>8. spotkanie</title>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="../css/main.css">
     <!--endbuild-->
@@ -21,20 +21,18 @@
         <main class="main">
             <article class="page-event">
                 <header>
-                    <h2>{{ title }}</h2>
-                    {{#if subtitle}}
-                    <p>{{ subtitle }}</p>{{/if}}
-                    <p>{{#if date}}
-                        <time datetime="{{ date }}">{{ date }}</time>{{else}}Brak daty{{/if}}</p>
+                    <h2>8. spotkanie</h2>
+
+                    <p>
+                        <time datetime="2017-09-26">2017-09-26</time></p>
                 </header>
-                {{{ contents }}} {{#if artists}}
-                <h3>Artyści</h3>
-                <ul class="artists">
-                    {{#each artists}}
-                    <li>{{!--<a href="artists/{{#encodeURI}}{{this}}{{/encodeURI}}.html"> --}}{{this}}{{!..</a>--}}</li>
-                    {{/each}}
-                </ul>
-                {{/if}}</article>
+                <h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+ </article>
         </main>
         <footer class="footer"><a href="../">Strona główna</a></footer>
     </div>
