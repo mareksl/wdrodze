@@ -21,10 +21,10 @@
         <main class="main">
             <article class="latest-event">
                 <header>
-                    <h2>Najnowsze wydarzenie</h2>
+                    <h2>Najnowsze spotkanie</h2>
                     {{#with pages.[0]}}
-                    <a href="{{ url }}">{{ title }}</a>
-                    <p>{{#if date}}
+                    <a class="latest-event__title" href="{{ url }}">{{ title }}</a>
+                    <p class="latest-event__date">{{#if date}}
                         <time datetime="{{ date }}">{{ date }}</time>
                         {{else}}Brak daty{{/if}}</p>
                 </header>{{{ contents }}} {{#if artists}}
@@ -37,12 +37,12 @@
                 {{/if}} {{/with}}
             </article>
             <aside class="previous-events">
-                <h2>Poprzednie wydarzenia</h2>
+                <h2>Poprzednie spotkania</h2>
                 <ul class="previous-events__list">
                     {{#each pages }} {{#unless @first}}
                     <li><a class="previous-events__link" href="{{ url }}">
-                        <span>{{ title }}</span><span>{{#if date}}{{date}}{{else}}Brak daty{{/if}}</span>
-                        </a>
+                        <span>{{ title }}</span><span class="previous-events__date">{{#if date}}<time datetime="{{ date }}">{{date}}</time>{{else}}Brak daty{{/if}}</span>
+                        </a><span class="previous-events__excerpt">{{ excerpt }}</span>
                     </li>
                     {{/unless}} {{/each}}
                 </ul>
