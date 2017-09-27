@@ -40,11 +40,10 @@
                 <h2>Poprzednie wydarzenia</h2>
                 <ul class="previous-events__list">
                     {{#each pages }} {{#unless @first}}
-                    <a href="{{ url }}">
-                        <li>
-                            <span>{{ title }}</span><span>{{#if date}}{{date}}{{else}}Brak daty{{/if}}</span>
-                        </li>
-                    </a>
+                    <li><a class="previous-events__link" href="{{ url }}">
+                        <span>{{ title }}</span><span>{{#if date}}{{date}}{{else}}Brak daty{{/if}}</span>
+                        </a>
+                    </li>
                     {{/unless}} {{/each}}
                 </ul>
             </aside>
