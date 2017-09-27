@@ -188,8 +188,7 @@ p {
   text-align: justify; }
 
 small {
-  font-size: .8em;
-  color: grey; }
+  font-size: .8em; }
 
 a {
   outline: none;
@@ -258,7 +257,7 @@ body {
   padding: 2vh 2vw;
   flex: 1 1 33%; }
 
-.previous-events__list li {
+.previous-events__link {
   display: flex;
   flex-flow: column;
   white-space: nowrap;

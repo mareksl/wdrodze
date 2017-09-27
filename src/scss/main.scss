@@ -78,12 +78,14 @@ body {
 }
 
 .previous-events__list {
-    li {
-        display: flex;
-        flex-flow: column;
-        white-space: nowrap;
-        margin: 1rem 0;
-    }
+    li {}
+}
+
+.previous-events__link {
+    display: flex;
+    flex-flow: column;
+    white-space: nowrap;
+    margin: 1rem 0;
 }
 
 .page-event {
@@ -91,9 +93,11 @@ body {
     padding: 2vh 2vw;
     flex: 1 1 100%;
 }
+
 .page-event__subtitle {
     font-weight: 900;
 }
+
 .page-event__date {
     font-weight: 900;
     font-style: italic;
