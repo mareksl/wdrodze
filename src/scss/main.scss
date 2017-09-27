@@ -6,6 +6,7 @@ html {
 
 body {
     height: 100%;
+    background-color: #FFFFf0;
 }
 
 .wrapper {
@@ -15,15 +16,23 @@ body {
 }
 
 .header {
+    white-space: nowrap;
     padding: 2vh 2vw;
     font-weight: 900; // background-color: lavender;
-    &:after {
-        content: '';
-        display: block;
-        height: .5rem;
-        width: 5rem;
-        background-color: #000;
-    }
+    // &:after {
+    //     content: '';
+    //     transition: .2s;
+    //     display: block;
+    //     height: 4px;
+    //     width: 5rem;
+    //     background-color: $color-primary;
+    //     box-shadow: 2px 2px $color-secondary-l3;
+    // }
+    // &:hover {
+    //     &:after {
+    //         background-color: $color-secondary;
+    //     }
+    // }
 }
 
 .main {
@@ -36,10 +45,15 @@ body {
 .footer {
     padding: 2vh 2vw;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    white-space: nowrap;
 }
 
 .latest-event {
-    flex: 1 1 66%; // background-color: khaki;
+    flex: 1 1 66%;
+    border-left: 4px solid $color-primary;
     padding: 2vh 2vw;
 }
 
@@ -68,10 +82,19 @@ body {
         display: flex;
         flex-flow: column;
         white-space: nowrap;
+        margin: 1rem 0;
     }
 }
 
 .page-event {
+    border-left: 4px solid $color-primary;
     padding: 2vh 2vw;
     flex: 1 1 100%;
+}
+.page-event__subtitle {
+    font-weight: 900;
+}
+.page-event__date {
+    font-weight: 900;
+    font-style: italic;
 }

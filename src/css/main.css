@@ -130,7 +130,7 @@ html {
   font-size: 16px; }
 
 body {
-  color: #2f2f2f;
+  color: #5b423b;
   font-family: "Pt Serif";
   font-weight: 400;
   font-size: 100%;
@@ -144,27 +144,42 @@ h5,
 h6 {
   font-family: "Pt Sans";
   font-weight: 900;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: .5rem; }
 
 h1 {
-  font-size: 5.61em;
+  font-size: calc(.8 * 5.61em);
   font-family: "PT Sans Narrow";
   text-transform: uppercase; }
 
 h2 {
-  font-size: 4.209em; }
+  font-size: calc(.8 * 4.209em); }
 
 h3 {
-  font-size: 3.157em; }
+  font-size: calc(.8 * 3.157em); }
 
 h4 {
-  font-size: 2.369em; }
+  font-size: calc(.8 * 2.369em); }
 
 h5 {
-  font-size: 1.777em; }
+  font-size: calc(.8 * 1.777em); }
 
 h6 {
-  font-size: 1.333em; }
+  font-size: calc(.8 * 1.333em); }
+
+@media screen and (min-width: 420px) {
+  h1 {
+    font-size: 5.61em; }
+  h2 {
+    font-size: 4.209em; }
+  h3 {
+    font-size: 3.157em; }
+  h4 {
+    font-size: 2.369em; }
+  h5 {
+    font-size: 1.777em; }
+  h6 {
+    font-size: 1.333em; } }
 
 p {
   font-size: 1em;
@@ -179,12 +194,13 @@ small {
 a {
   outline: none;
   text-decoration: none;
-  color: darkred; }
+  color: #A82200;
+  transition: .2s; }
   a:visited {
-    color: darkred; }
+    color: #A82200; }
   a:hover, a:focus {
-    color: red;
-    transform: scale(1.1); }
+    text-shadow: 2px 2px #ffff9d;
+    color: #00a338; }
 
 i {
   font-style: italic; }
@@ -199,7 +215,8 @@ html {
   height: 100%; }
 
 body {
-  height: 100%; }
+  height: 100%;
+  background-color: #FFFFf0; }
 
 .wrapper {
   min-height: 100vh;
@@ -207,14 +224,9 @@ body {
   flex-flow: column; }
 
 .header {
+  white-space: nowrap;
   padding: 2vh 2vw;
   font-weight: 900; }
-  .header:after {
-    content: '';
-    display: block;
-    height: .5rem;
-    width: 5rem;
-    background-color: #000; }
 
 .main {
   padding: 2vh 2vw;
@@ -224,10 +236,15 @@ body {
 
 .footer {
   padding: 2vh 2vw;
-  display: flex; }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  white-space: nowrap; }
 
 .latest-event {
   flex: 1 1 66%;
+  border-left: 4px solid #A82200;
   padding: 2vh 2vw; }
 
 .latest-event__artists li {
@@ -244,8 +261,17 @@ body {
 .previous-events__list li {
   display: flex;
   flex-flow: column;
-  white-space: nowrap; }
+  white-space: nowrap;
+  margin: 1rem 0; }
 
 .page-event {
+  border-left: 4px solid #A82200;
   padding: 2vh 2vw;
   flex: 1 1 100%; }
+
+.page-event__subtitle {
+  font-weight: 900; }
+
+.page-event__date {
+  font-weight: 900;
+  font-style: italic; }
