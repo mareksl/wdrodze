@@ -18,21 +18,7 @@ body {
 .header {
     white-space: nowrap;
     padding: 2vh 2vw;
-    font-weight: 900; // background-color: lavender;
-    // &:after {
-    //     content: '';
-    //     transition: .2s;
-    //     display: block;
-    //     height: 4px;
-    //     width: 5rem;
-    //     background-color: $color-primary;
-    //     box-shadow: 2px 2px $color-secondary-l3;
-    // }
-    // &:hover {
-    //     &:after {
-    //         background-color: $color-secondary;
-    //     }
-    // }
+    font-weight: 900;
 }
 
 .main {
@@ -57,6 +43,15 @@ body {
     padding: 2vh 2vw;
 }
 
+.latest-event__title {
+    font-weight: 900;
+}
+
+.latest-event__date {
+    font-weight: 900;
+    font-style: italic;
+}
+
 .latest-event__artists {
     li {
         display: inline;
@@ -72,7 +67,6 @@ body {
 }
 
 .previous-events {
-    // background-color: peachpuff;
     padding: 2vh 2vw;
     flex: 1 1 33%;
 }
@@ -88,6 +82,14 @@ body {
     margin: 1rem 0;
 }
 
+.previous-events__date {
+    font-style: italic;
+}
+.previous-events__excerpt {
+    &:after {
+        content: '...';
+    }
+}
 .page-event {
     border-left: 4px solid $color-primary;
     padding: 2vh 2vw;
