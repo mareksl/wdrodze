@@ -143,32 +143,34 @@ h4,
 h5,
 h6 {
   font-family: "Pt Sans";
-  font-weight: 900; }
+  font-weight: 900;
+  line-height: 1.2; }
 
 h1 {
-  font-size: calc(0.5 * 5.61em);
+  font-size: 5.61em;
   font-family: "PT Sans Narrow";
   text-transform: uppercase; }
 
 h2 {
-  font-size: calc(0.5 * 4.209em); }
+  font-size: 4.209em; }
 
 h3 {
-  font-size: calc(0.5 * 3.157em); }
+  font-size: 3.157em; }
 
 h4 {
-  font-size: calc(0.5 * 2.369em); }
+  font-size: 2.369em; }
 
 h5 {
-  font-size: calc(0.5 * 1.777em); }
+  font-size: 1.777em; }
 
 h6 {
-  font-size: calc(0.5 * 1.333em); }
+  font-size: 1.333em; }
 
 p {
   font-size: 1em;
   max-width: 32rem;
-  padding: .4rem 0; }
+  padding: .4rem 0;
+  text-align: justify; }
 
 small {
   font-size: .8em;
@@ -181,7 +183,8 @@ a {
   a:visited {
     color: darkred; }
   a:hover, a:focus {
-    color: red; }
+    color: red;
+    transform: scale(1.1); }
 
 i {
   font-style: italic; }
@@ -193,11 +196,9 @@ strong {
   font-weight: bold; }
 
 html {
-  font-size: 16px;
   height: 100%; }
 
 body {
-  font-size: 100%;
   height: 100%; }
 
 .wrapper {
@@ -206,7 +207,7 @@ body {
   flex-flow: column; }
 
 .header {
-  padding: 1rem;
+  padding: 2vh 2vw;
   font-weight: 900; }
   .header:after {
     content: '';
@@ -216,18 +217,18 @@ body {
     background-color: #000; }
 
 .main {
-  padding: 1rem;
+  padding: 2vh 2vw;
   display: flex;
   flex-flow: row wrap;
   flex: 1; }
 
 .footer {
-  padding: 1rem;
+  padding: 2vh 2vw;
   display: flex; }
 
 .latest-event {
-  flex: 1 1 80%;
-  padding: 1rem; }
+  flex: 1 1 66%;
+  padding: 2vh 2vw; }
 
 .latest-event__artists li {
   display: inline; }
@@ -237,15 +238,14 @@ body {
     content: ''; }
 
 .previous-events {
-  padding: 1rem;
-  flex: 1 1 20%; }
+  padding: 2vh 2vw;
+  flex: 1 1 33%; }
 
 .previous-events__list li {
   display: flex;
-  flex-flow: column;
-  white-space: nowrap;
-  margin-bottom: 1rem; }
+  justify-content: space-between;
+  white-space: nowrap; }
 
 .page-event {
-  padding: 1rem;
+  padding: 2vh 2vw;
   flex: 1 1 100%; }
