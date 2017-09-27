@@ -42,7 +42,7 @@
                     {{#each pages }} {{#unless @first}}
                     <a href="{{ url }}">
                         <li>
-                            <span>{{#if date}}{{date}}{{else}}Brak daty{{/if}}: </span><span>{{ title }}</span>
+                            <span>{{ title }}</span><span>{{#if date}}{{date}}{{else}}Brak daty{{/if}}</span>
                         </li>
                     </a>
                     {{/unless}} {{/each}}
