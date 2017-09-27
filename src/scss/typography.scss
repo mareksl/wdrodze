@@ -2,7 +2,14 @@
 $heading: 'PT Sans Narrow';
 $subheading: 'Pt Sans';
 $text: 'Pt Serif';
-$color-body: #2f2f2f;
+$color-body: #5b423b;
+// $color-body: #33130B;
+// $color-primary: #ff6138;
+$color-primary: #A82200;
+$color-secondary: #00a338;
+$color-secondary-l1: #79bd8f;
+$color-secondary-l2: #beeb9f;
+$color-secondary-l3: #ffff9d;
 html {
     font-size: 16px;
 }
@@ -23,54 +30,80 @@ h5,
 h6 {
     font-family: $subheading;
     font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: .5rem;
 }
 
 h1 {
-    font-size: calc(0.5 * 5.61em);
+    font-size: calc(.8 * 5.61em);
     font-family: $heading;
     text-transform: uppercase;
 }
 
 h2 {
-    font-size: calc(0.5 * 4.209em);
+    font-size: calc(.8 * 4.209em);
 }
 
 h3 {
-    font-size: calc(0.5 * 3.157em);
+    font-size: calc(.8 * 3.157em);
 }
 
 h4 {
-    font-size: calc(0.5 * 2.369em);
+    font-size: calc(.8 * 2.369em);
 }
 
 h5 {
-    font-size: calc(0.5 * 1.777em);
+    font-size: calc(.8 * 1.777em);
 }
 
 h6 {
-    font-size: calc(0.5 * 1.333em);
+    font-size: calc(.8 * 1.333em);
+}
+
+@media screen and (min-width: 420px) {
+    h1 {
+        font-size: 5.61em;
+    }
+    h2 {
+        font-size: 4.209em;
+    }
+    h3 {
+        font-size: 3.157em;
+    }
+    h4 {
+        font-size: 2.369em;
+    }
+    h5 {
+        font-size: 1.777em;
+    }
+    h6 {
+        font-size: 1.333em;
+    }
 }
 
 p {
     font-size: 1em;
     max-width: 32rem;
     padding: .4rem 0;
+    text-align: justify;
 }
 
 small {
     font-size: .8em;
-    color: grey; //VARIABLE
 }
 
 a {
     outline: none;
     text-decoration: none;
-    color: darkred;
+    color: $color-primary;
+    transition: .2s;
     &:visited {
-        color: darkred;
+        color: $color-primary;
     }
-    &:hover, &:focus {
-        color: red;
+    &:hover,
+    &:focus {
+        text-shadow: 2px 2px $color-secondary-l3;
+        color: $color-secondary;
     }
 }
 

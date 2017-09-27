@@ -94,6 +94,7 @@ gulp.task('generate_pages', function () {
             console.log('Processed: ' + data.name);
             // replace file contents without meta data
             contents = contents.slice(index + 3, contents.length);
+            data.excerpt = contents.slice(0,139);
             file.contents = new Buffer(contents, "utf-8");
           }
         }))
