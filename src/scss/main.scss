@@ -1,12 +1,10 @@
 @import 'reset';
 @import 'typography';
 html {
-    font-size: 16px;
     height: 100%;
 }
 
 body {
-    font-size: 100%;
     height: 100%;
 }
 
@@ -17,7 +15,7 @@ body {
 }
 
 .header {
-    padding: 1rem;
+    padding: 2vh 2vw;
     font-weight: 900; // background-color: lavender;
     &:after {
         content: '';
@@ -29,20 +27,20 @@ body {
 }
 
 .main {
-    padding: 1rem;
+    padding: 2vh 2vw;
     display: flex;
     flex-flow: row wrap;
     flex: 1;
 }
 
 .footer {
-    padding: 1rem;
+    padding: 2vh 2vw;
     display: flex;
 }
 
 .latest-event {
-    flex: 1 1 80%; // background-color: khaki;
-    padding: 1rem;
+    flex: 1 1 66%; // background-color: khaki;
+    padding: 2vh 2vw;
 }
 
 .latest-event__artists {
@@ -61,8 +59,8 @@ body {
 
 .previous-events {
     // background-color: peachpuff;
-    padding: 1rem;
-    flex: 1 1 20%;
+    padding: 2vh 2vw;
+    flex: 1 1 33%;
 }
 
 .previous-events__list {
@@ -70,11 +68,10 @@ body {
         display: flex;
         justify-content: space-between;
         white-space: nowrap;
-        border-bottom: 1px dotted grey;
     }
 }
 
 .page-event {
-    padding: 1rem;
+    padding: 2vh 2vw;
     flex: 1 1 100%;
 }

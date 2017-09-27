@@ -23,38 +23,40 @@ h5,
 h6 {
     font-family: $subheading;
     font-weight: 900;
+    line-height: 1.2;
 }
 
 h1 {
-    font-size: calc(0.5 * 5.61em);
+    font-size: 5.61em;
     font-family: $heading;
     text-transform: uppercase;
 }
 
 h2 {
-    font-size: calc(0.5 * 4.209em);
+    font-size: 4.209em;
 }
 
 h3 {
-    font-size: calc(0.5 * 3.157em);
+    font-size: 3.157em;
 }
 
 h4 {
-    font-size: calc(0.5 * 2.369em);
+    font-size: 2.369em;
 }
 
 h5 {
-    font-size: calc(0.5 * 1.777em);
+    font-size: 1.777em;
 }
 
 h6 {
-    font-size: calc(0.5 * 1.333em);
+    font-size: 1.333em;
 }
 
 p {
     font-size: 1em;
     max-width: 32rem;
     padding: .4rem 0;
+    text-align: justify;
 }
 
 small {
@@ -65,12 +67,14 @@ small {
 a {
     outline: none;
     text-decoration: none;
-    color: darkred;
+    color: darkred; // transition: .2s;
     &:visited {
         color: darkred;
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         color: red;
+        transform: scale(1.1);
     }
 }
 
