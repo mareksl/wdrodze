@@ -72,14 +72,16 @@ body {
 }
 
 .previous-events__list {
-    li {}
+    li {
+        display: flex;
+        align-items: baseline;
+    }
 }
-
 .previous-events__link {
     display: flex;
     flex-flow: column;
     white-space: nowrap;
-    margin: 1rem 0;
+    margin: 1rem 1rem 1rem 0;
 }
 
 .previous-events__date {
@@ -90,17 +92,26 @@ body {
         content: '...';
     }
 }
-.page-event {
+.event-details {
     border-left: 4px solid $color-primary;
     padding: 2vh 2vw;
-    flex: 1 1 100%;
+    flex: 1 1 66%;
 }
 
-.page-event__subtitle {
+.event-details__subtitle {
     font-weight: 900;
 }
 
-.page-event__date {
+.event-details__date {
     font-weight: 900;
     font-style: italic;
+}
+.event-details__sponsors {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.event-artists {
+        padding: 2vh 2vw;
+        flex: 1 1 33%;
 }
