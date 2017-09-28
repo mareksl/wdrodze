@@ -1,6 +1,6 @@
-{"firstName":"Alicja",
-"lastName":"Bach",
-"website":"https://www.google.com"}
+{"firstName": "Alicja",
+"lastName": "Bach",
+"links": {"Strona internetowa":"https://www.google.com","Facebook":"https://www.facebook.com"}}
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida metus sed nunc venenatis fringilla. Duis venenatis orci sit amet ipsum consectetur hendrerit id eu nisi. Integer erat dui, pretium nec pharetra congue, ullamcorper sit amet tellus.
 
