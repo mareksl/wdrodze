@@ -16,6 +16,7 @@ body {
 }
 
 .header {
+    text-align: left;
     white-space: nowrap;
     padding: 2vh 2vw;
     font-weight: 900;
@@ -66,7 +67,7 @@ body {
     }
 }
 
-.previous-events {
+.previous-events {    
     padding: 2vh 2vw;
     flex: 1 1 33%;
 }
@@ -117,7 +118,7 @@ body {
     flex-flow: row wrap;
 }
 
-.event-artists {
+.event-artists {    
     padding: 2vh 2vw;
     flex: 1 1 33%;
 }
@@ -128,7 +129,7 @@ body {
     flex: 1 1 66%;
 }
 
-.artist-details {
+.artist-details {    
     padding: 2vh 2vw;
     flex: 1 1 33%;
 }

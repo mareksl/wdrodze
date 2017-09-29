@@ -222,6 +222,7 @@ body {
   flex-flow: column; }
 
 .header {
+  text-align: left;
   white-space: nowrap;
   padding: 2vh 2vw;
   font-weight: 900; }
