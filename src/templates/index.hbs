@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>W drodze</title>
+    <title>W Drodze</title>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/main.css">
     <!--endbuild-->
@@ -31,7 +31,7 @@
                 <h3>Artyści</h3>
                 <ul class="latest-event__artists">
                     {{#each artists}}
-                    <li>{{#if this.page}}<a href="{{this.page}}">{{this.name}}</a>{{else}}{{this.name}}{{/if}}</li>
+                    <li>{{#if this.page}}<a href="artists/{{this.page}}">{{this.name}}</a>{{else}}{{this.name}}{{/if}}</li>
                     {{/each}}
                 </ul>
                 {{/if}} {{/with}}

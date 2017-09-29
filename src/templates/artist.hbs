@@ -19,12 +19,18 @@
             </a>
         </header>
         <main class="main">
-            <article class="event-details">
+            <article class="artist-description">
                 <header>
-                    <h2>{{ fullName this}}</h2>
+                    <h2>{{ fullName this }}</h2>
                 </header>
                 {{{ contents }}}</article>
-            <aside class="">
+            <aside class="artist-details">
+                {{#if links}}
+                <h3>Kontakt</h3>
+                <ul class="artist-details__links">{{#each links}}
+                    <li><a href="{{this}}">{{@key}}</a></li>
+                    {{/each}}</ul>
+                {{/if}}
             </aside>
         </main>
         <footer class="footer"><a href="../">Wróć do strony głównej</a><small>Marek Sładczyk 2017</small></footer>
