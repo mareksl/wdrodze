@@ -16,6 +16,7 @@
         <header class="header">
             <a href="#">
                 <h1>W Drodze...</h1>
+                <p>cykl autorskich wystaw zbiorowych Danuty Joppek</p>
             </a>
         </header>
         <main class="main">
@@ -23,10 +24,12 @@
                 <header>
                     <h2>Najnowsze spotkanie</h2>
                     {{#with pages.[0]}}
-                    <a class="latest-event__title" href="{{ url }}">{{ title }}</a>
-                    <p class="latest-event__date">{{#if date}}
-                        <time datetime="{{ date.start }}">{{ date.start }}</time>
-                        {{else}}Brak daty{{/if}}</p>
+                    <a href="{{ url }}">
+                        <p class="latest-event__title">{{ title }}</p>
+                        <p class="latest-event__date">{{#if date}}
+                            <time datetime="{{ date.start }}">{{ date.start }}</time>
+                            {{else}}Brak daty{{/if}}</p>
+                    </a>
                 </header>{{{ contents }}} {{#if artists}}
                 <h3>Artyści</h3>
                 <ul class="latest-event__artists">
