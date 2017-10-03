@@ -31,11 +31,10 @@ h6 {
     font-family: $subheading;
     font-weight: 900;
     line-height: 1.2;
-    margin-bottom: .5rem;
 }
 
 h1 {
-    font-size: calc(.8 * 5.61em);
+    font-size: 20vw;
     font-family: $heading;
     text-transform: uppercase;
 }
@@ -60,7 +59,7 @@ h6 {
     font-size: calc(.8 * 1.333em);
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 446px) {
     h1 {
         font-size: 5.61em;
     }
@@ -84,8 +83,7 @@ h6 {
 p {
     font-size: 1em;
     max-width: 32rem;
-    padding: .4rem 0;
-    // text-align: justify;
+    padding: .4rem 0; // text-align: justify;
 }
 
 small {
@@ -97,6 +95,7 @@ a {
     text-decoration: none;
     color: $color-primary;
     transition: .2s;
+    display: inline-block;
     &:visited {
         color: $color-primary;
     }

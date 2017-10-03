@@ -144,11 +144,10 @@ h5,
 h6 {
   font-family: "Pt Sans";
   font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: .5rem; }
+  line-height: 1.2; }
 
 h1 {
-  font-size: calc(.8 * 5.61em);
+  font-size: 20vw;
   font-family: "PT Sans Narrow";
   text-transform: uppercase; }
 
@@ -167,7 +166,7 @@ h5 {
 h6 {
   font-size: calc(.8 * 1.333em); }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 446px) {
   h1 {
     font-size: 5.61em; }
   h2 {
@@ -193,7 +192,8 @@ a {
   outline: none;
   text-decoration: none;
   color: #A82200;
-  transition: .2s; }
+  transition: .2s;
+  display: inline-block; }
   a:visited {
     color: #A82200; }
   a:hover, a:focus {
@@ -223,7 +223,6 @@ body {
 
 .header {
   text-align: left;
-  white-space: nowrap;
   padding: 2vh 2vw;
   font-weight: 900; }
 
@@ -267,7 +266,7 @@ body {
 .previous-events__list li {
   display: flex;
   align-items: baseline;
-  padding: .5rem 0; }
+  padding: .4rem 0; }
 
 .previous-events__link {
   display: flex;
@@ -276,6 +275,7 @@ body {
   margin-right: 1rem; }
 
 .previous-events__date {
+  padding: .4rem 0;
   font-style: italic; }
 
 .previous-events__excerpt:after {
