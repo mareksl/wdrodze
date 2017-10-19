@@ -105,7 +105,7 @@ a {
     }
     &:hover,
     &:focus {
-        text-shadow: 2px 2px $color-secondary-l3;
+        text-shadow: 1px 1px 1px $color-secondary-l3;
         color: $color-secondary;
     }
 }
