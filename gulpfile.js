@@ -9,6 +9,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var imagemin = require('gulp-imagemin');
 var htmlreplace = require('gulp-html-replace');
+var imageminJpegoptim = require('imagemin-jpegoptim');
 
 
 
@@ -90,7 +91,11 @@ gulp.task('clean:artists', function () {
 });
 gulp.task('imagemin', function () {
   return gulp.src('src/artists/*/img/*.*')
-    .pipe(imagemin())
+    .pipe(imagemin([imageminJpegoptim({
+      progressive: true,
+      max: 90,
+      stripAll: true
+    })]))
     .pipe(gulp.dest('docs/artists'));
 });
 // build page
