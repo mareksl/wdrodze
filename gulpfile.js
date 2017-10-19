@@ -7,6 +7,10 @@ var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var del = require('del');
 var runSequence = require('run-sequence');
+var imagemin = require('gulp-imagemin');
+var htmlreplace = require('gulp-html-replace');
+
+
 
 var markdown = require('gulp-markdown');
 var tap = require('gulp-tap');
@@ -21,30 +25,77 @@ Handlebars.registerHelper('fullName', function (person) {
   return person.firstName + " " + person.lastName;
 });
 
+Handlebars.registerHelper('checklength', function (v1, v2, options) {
+  'use strict';
+  if (v1.length > v2) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
+
+Handlebars.registerHelper('address', function(input){
+  'use strict';
+  const addressArr = input.split(',');
+  let addressStr = `<p class="event-details__address">`;
+  for (let i = 0; i < addressArr.length; i++) {
+    addressStr += `<span>`
+    addressStr += addressArr[i];
+    addressStr += `</span>`;
+    if (i<addressArr.length-1) {
+      addressStr += `<br>`;
+    }
+  }
+  addressStr += `</p>`;
+  return addressStr;
+})
+
 // uglify js and css
 gulp.task('useref', function () {
   return gulp.src('src/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
+    // .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('docs'));
 });
-// clean dist folder
-gulp.task('clean:dist', function () {
-  return del.sync('dist');
+// copy generated pages to docs
+gulp.task('pages', function () {
+  gulp.src("src/pages/**.*")
+    .pipe(htmlreplace({
+      'cssRe': '../../css/styles.min.css',
+    }))
+    .pipe(gulp.dest('docs/pages'));
+});
+
+// copy generated artists to docs
+gulp.task('artists', function () {
+  gulp.src("src/artists/*/*.*")
+    .pipe(htmlreplace({
+      'cssRe': '../../css/styles.min.css',
+    }))
+    .pipe(gulp.dest('docs/artists'));
+});
+
+// clean docs folder
+gulp.task('clean:docs', function () {
+  return del.sync('docs');
 });
 // clean pages folder
 gulp.task('clean:pages', function () {
   initList('pages');
-  return del.sync('src/pages/*.*');
+  return del.sync('src/pages/*.html');
 });
 gulp.task('clean:artists', function () {
   initList('artists');
-  return del.sync('src/artists/*.*');
+  return del.sync('src/artists/*.html');
+});
+gulp.task('imagemin', function () {
+  return gulp.src('src/artists/*/img/*.*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('docs/artists'));
 });
 // build page
 gulp.task('build', function (callback) {
-  runSequence('clean:dist', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref'],
+  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref'], 'imagemin',
     callback
   );
 });
@@ -122,14 +173,7 @@ gulp.task('generate_pages', function () {
       console.log('Completed generating pages!');
     });
 });
-// copy generated pages to dist
-gulp.task('pages', function () {
-  gulp.src("src/pages/**.*")
-    .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist/pages'));
-});
+
 gulp.task('generate_artists', function () {
   // read the template from page.hbs
   return gulp.src('src/templates/artist.hbs')
@@ -138,7 +182,7 @@ gulp.task('generate_artists', function () {
       var template = Handlebars.compile(file.contents.toString());
 
       // now read all the pages from the pages directory
-      return gulp.src('src/templates/artists/**.md')
+      return gulp.src('src/templates/artists/*/**.md')
         .pipe(tap(function (file) {
           // use path library to get file name
           var name = path.basename(file.path, ".md");
@@ -184,14 +228,6 @@ gulp.task('generate_artists', function () {
     .on('end', function () {
       console.log('Completed generating artists!');
     });
-});
-// copy generated pages to dist
-gulp.task('artists', function () {
-  gulp.src("src/artists/**.*")
-    .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist/artists'));
 });
 
 // generate index.html with list of pages

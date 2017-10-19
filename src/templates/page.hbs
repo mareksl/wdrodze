@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>W Drodze: {{ title }}</title>
-    <!--build:css ../css/styles.min.css-->
+    <!--build:cssRe-->
     <link rel="stylesheet" href="../css/main.css">
     <!--endbuild-->
 </head>
@@ -16,7 +16,7 @@
         <header class="header">
             <a href="../">
                 <h1>W Drodze...</h1>
-                <p>cykl autorskich wystaw zbiorowych Danuty Joppek</p>
+                <p class="header__subtitle">cykl autorskich wystaw zbiorowych Danuty Joppek</p>
             </a>
         </header>
         <main class="main">
@@ -24,34 +24,42 @@
                 <header>
                     <h2 id="tytul">{{ title }}</h2>
                     {{#if subtitle}}
-                    <p class="event-details__subtitle">{{ subtitle }}</p>{{/if}}
-                    <p class="event-details__date">{{#if date}}
-                        <time datetime="{{ date.start }}">{{ date.start }}</time>{{else}}Brak daty{{/if}}</p>
+                        <p class="event-details__subtitle">{{ subtitle }}</p>
+                    {{/if}}
+                    <p class="event-details__date">
+                        {{#if date}}
+                            <time datetime="{{ date.start }}">{{ date.start }}</time>
+                        {{else}}Brak daty{{/if}}
+                    </p>
                 </header>
-                {{{ contents }}}{{#if artists}}
-                <h3 id="artysci">Artyści</h3>
-                <ul>
-                    {{#each artists}}
-                    <li>{{#if this.page}}<a href="../artists/{{this.page}}">{{this.name}}</a>{{else}}{{this.name}}{{/if}}</li>
-                    {{/each}}
-                </ul>
-                {{/if}}</article>
+                {{{ contents }}}
+                {{#if artists}}
+                    <h3 id="artysci">Artyści</h3>
+                    <ul>
+                        {{#each artists}}
+                            <li>
+                                {{#if this.page}}<a href="../artists/{{this.page}}/">{{this.name}}</a>{{else}}{{this.name}}{{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            </article>
             <aside class="event-artists">
                 {{#if location}}
-                <h3>Miejsce</h3>
-                <p>{{#if location.logo}}<img src="../img/{{location.logo}}" alt="{{location.name}}" title={{location.name}}>{{else}}{{location.name}}{{/if}}</p>
-                {{/if}} {{#if sponsors}}
-                <h3>Sponsorzy</h3>
-                <ul class="event-details__sponsors">
-                    {{#each sponsors}}
-                    <li><img src="../img/{{this.logo}}" alt="{{this.name}}" title="{{this.name}}"></li>
-                    {{/each}}
-                </ul>
+                    <h3>Miejsce</h3>
+                        {{#if location.logo}}<img src="../img/{{location.logo}}" alt="{{location.name}}" title= {{location.name}}>{{else}}<p>{{location.name}}</p>{{/if}}{{{address location.address}}}
+                {{/if}}
+                {{#if sponsors}}
+                    <h3>Sponsorzy</h3>
+                    <ul class="event-details__sponsors">
+                        {{#each sponsors}}
+                            <li><img src="../img/{{this.logo}}" alt="{{this.name}}" title="{{this.name}}"></li>
+                        {{/each}}
+                    </ul>
                 {{/if}}
             </aside>
         </main>
         <footer class="footer"><a href="../">Wróć do strony głównej</a><small>Marek Sładczyk 2017</small></footer>
     </div>
 </body>
-
 </html>
