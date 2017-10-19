@@ -6,7 +6,7 @@ html {
 
 body {
     height: 100%;
-    background-color: #FFFFf0;
+    background-color: #fff;
 }
 
 .wrapper {
@@ -17,9 +17,12 @@ body {
 
 .header {
     text-align: left;
-    // white-space: nowrap;
     padding: 2vh 2vw;
     font-weight: 900;
+}
+
+.header__subtitle {
+    padding: 0 0 0 4px;
 }
 
 .main {
@@ -113,6 +116,8 @@ body {
     font-style: italic;
 }
 
+.event-details__address {}
+
 .event-details__sponsors {
     display: flex;
     justify-content: space-between;
@@ -125,18 +130,57 @@ body {
 }
 
 .artist-description {
+    position: relative;
     border-left: 4px solid $color-primary;
     padding: 2vh 2vw;
     flex: 1 1 66%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    li {
+        padding-bottom: .2rem;
+        &:before {
+            display: inline-block;
+            content: '';
+            margin: .2rem 5px;
+            background-color: $color-primary;
+            height: .25rem;
+            width: .25rem;
+        }
+    }
+    img {
+        margin: 1rem;
+        height: 256px;
+        width: auto;
+        border: 2px solid $color_primary;
+    }
 }
 
 .artist-details {
     padding: 2vh 2vw;
     flex: 1 1 33%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .artist-details__links {
     li {
         padding: .5rem 0;
+    }
+}
+
+.artist-details__photo {
+    display: flex;
+    overflow: hidden;
+    border: 2px solid $color-primary;
+    flex: 0 1 256px;
+    width: 256px;
+    justify-content: center;
+    align-items: center;
+    img {
+        min-width: 100%;
+        flex: none;
     }
 }
