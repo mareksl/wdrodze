@@ -98,9 +98,19 @@ gulp.task('imagemin', function () {
     })]))
     .pipe(gulp.dest('docs/artists'));
 });
+gulp.task('rootimagemin', function () {
+  return gulp.src('src/img/*.*')
+    .pipe(imagemin([imageminJpegoptim({
+      progressive: true,
+      max: 90,
+      stripAll: true
+    })]))
+    .pipe(gulp.dest('docs/img'));
+});
+
 // build page
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref'], 'imagemin',
+  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref'], 'rootimagemin', 'imagemin',
     callback
   );
 });
