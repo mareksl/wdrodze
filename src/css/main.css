@@ -262,6 +262,13 @@ body {
   .latest-event__artists li:last-child:after {
     content: ''; }
 
+.latest-event__sponsors li {
+  display: inline; }
+  .latest-event__sponsors li:after {
+    content: ' | '; }
+  .latest-event__sponsors li:last-child:after {
+    content: ''; }
+
 .previous-events {
   padding: 2vh 2vw;
   flex: 1 1 33%; }
@@ -303,6 +310,16 @@ body {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap; }
+  .event-details__sponsors li {
+    flex: 0 1 33%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .event-details__sponsors li img {
+      padding: .5rem;
+      width: 100%;
+      height: auto; }
 
 .event-artists {
   padding: 2vh 2vw;

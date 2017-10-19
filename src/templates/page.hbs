@@ -38,7 +38,9 @@
                     <ul>
                         {{#each artists}}
                             <li>
-                                {{#if this.page}}<a href="../artists/{{this.page}}/">{{this.name}}</a>{{else}}{{this.name}}{{/if}}
+                                {{#if this.page}}
+                                    <a href="../artists/{{this.page}}/">{{this.name}}</a>
+                                {{else}}{{this.name}}{{/if}}
                             </li>
                         {{/each}}
                     </ul>
@@ -47,19 +49,38 @@
             <aside class="event-artists">
                 {{#if location}}
                     <h3>Miejsce</h3>
-                        {{#if location.logo}}<img src="../img/{{location.logo}}" alt="{{location.name}}" title= {{location.name}}>{{else}}<p>{{location.name}}</p>{{/if}}{{{address location.address}}}
+                    {{#if location.logo}}
+                        <img src="../img/{{location.logo}}" alt="{{location.name}}" title= {{location.name}}>
+                    {{else}}
+                        <p>{{location.name}}</p>
+                    {{/if}}{{{address location.address}}}
                 {{/if}}
                 {{#if sponsors}}
                     <h3>Sponsorzy</h3>
                     <ul class="event-details__sponsors">
                         {{#each sponsors}}
-                            <li><img src="../img/{{this.logo}}" alt="{{this.name}}" title="{{this.name}}"></li>
+                            <li>
+                                {{#if this.link}}
+                                    <a href="{{this.link}}">
+                                {{/if}}
+                                {{#if this.logo}}
+                                    <img src="../img/{{this.logo}}" alt="{{this.name}}" title="{{this.name}}">
+                                {{else}}{{this.name}}
+                                {{/if}}
+                                {{#if this.link}}
+                                    </a>
+                                {{/if}}
+                            </li>
                         {{/each}}
                     </ul>
                 {{/if}}
             </aside>
         </main>
-        <footer class="footer"><a href="../">Wróć do strony głównej</a><small>Marek Sładczyk 2017</small></footer>
+        <footer class="footer">
+            <a href="../">Wróć do strony głównej</a>
+            <small>Marek Sładczyk 2017</small>
+        </footer>
     </div>
 </body>
+
 </html>
