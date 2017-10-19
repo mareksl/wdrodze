@@ -7,4 +7,4 @@ Studiowała w Państwowej Wyższej Szkole Sztuk Plastycznych w Gdańsku na wydzi
 
 Najważniejszym tematem prac artystki jest naturalne środowisko, niezakłócone przez działanie cywilizacji. Grafiki są efektem inspiracji, jaką przyniosły autorce uprawianie żeglarstwa morskiego i podróże. Natura jest niezmiennie głównym tematem jej prac, w których ukazuje magię i piękno świata przyrody. Przez cały okres pracy artystycznej, w kompozycjach autorki przewijały się sceny ukazujące rozległe wybrzeża, masywy górskie, fiordy oraz tajemnicze wyspy. Od kilku lat do tematyki jej twórczości dołączył także motyw ukazujący lodowce Arktyki. Grafiki wykonane są w klasycznych technikach metalowych: akwatinta, mezzotinta i akwaforta.
 
-[![asdasd](img/image_1.jpg)](img/image_1.jpg)
+[![Bez Tytułu](img/image_1.jpg)](img/image_1.jpg)

@@ -197,7 +197,7 @@ a {
   a:visited {
     color: #A82200; }
   a:hover, a:focus {
-    text-shadow: 2px 2px #ebe7ff;
+    text-shadow: 1px 1px 1px #ebe7ff;
     color: #007da3; }
 
 i {
@@ -295,6 +295,9 @@ body {
 .event-details__date {
   font-weight: 900;
   font-style: italic; }
+
+.event-details__address span {
+  display: block; }
 
 .event-details__sponsors {
   display: flex;

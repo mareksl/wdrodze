@@ -36,15 +36,15 @@ Handlebars.registerHelper('checklength', function (v1, v2, options) {
 
 Handlebars.registerHelper('address', function(input){
   'use strict';
-  const addressArr = input.split(',');
-  let addressStr = `<p class="event-details__address">`;
+  const addressArr = input.split(';');
+  let addressStr = `<p class="event-details__address vcard">`;
   for (let i = 0; i < addressArr.length; i++) {
     addressStr += `<span>`
     addressStr += addressArr[i];
     addressStr += `</span>`;
-    if (i<addressArr.length-1) {
-      addressStr += `<br>`;
-    }
+    // if (i<addressArr.length-1) {
+    //   addressStr += `<br>`;
+    // }
   }
   addressStr += `</p>`;
   return addressStr;

@@ -19,5 +19,5 @@ ur. 1961r. w Gdyni. 1989 r. studia w Państwowej Wyższej Szkole Sztuk Plastyczn
 * 2016 – Międzynarodowe Biennale Rysunku, Prijedor, Bośnia Hercegowina
 * 2016 – Gdańskie Biennnale Sztuki, Gdańska Galeria Miejska, Gdańsk
 
-[![asdasd](img/image_1.jpg)](img/image_1.jpg)
-[![asdasd](img/image_2.jpg)](img/image_2.jpg)
+[![Bez Tytułu](img/image_1.jpg)](img/image_1.jpg)
+[![Bez Tytułu](img/image_2.jpg)](img/image_2.jpg)

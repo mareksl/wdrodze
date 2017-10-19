@@ -116,7 +116,11 @@ body {
     font-style: italic;
 }
 
-.event-details__address {}
+.event-details__address {
+    span {
+        display: block;
+    }
+}
 
 .event-details__sponsors {
     display: flex;
