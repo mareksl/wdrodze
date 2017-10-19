@@ -70,6 +70,20 @@ body {
     }
 }
 
+.latest-event__sponsors {
+    li {
+        display: inline;
+        &:after {
+            content: ' | ';
+        }
+        &:last-child {
+            &:after {
+                content: '';
+            }
+        }
+    }
+}
+
 .previous-events {
     padding: 2vh 2vw;
     flex: 1 1 33%;
@@ -126,6 +140,18 @@ body {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    li {
+        flex: 0 1 33%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            padding: .5rem;
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 .event-artists {

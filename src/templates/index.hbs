@@ -38,7 +38,21 @@
                     <ul class="latest-event__artists">
                         {{#each artists}}
                             <li>
-                                {{#if this.page}}<a href="artists/{{this.page}}">{{this.name}}</a>{{else}}{{this.name}}{{/if}}
+                                {{#if this.page}}
+                                    <a href="artists/{{this.page}}">{{this.name}}</a>
+                                {{else}}{{this.name}}{{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+                {{#if sponsors}}
+                    <h3>Sponsorzy</h3>
+                    <ul class="latest-event__sponsors">
+                        {{#each sponsors}}
+                            <li>
+                                {{#if this.link}}
+                                    <a href="{{this.link}}">{{this.name}}</a>
+                                {{else}}{{this.name}}{{/if}}
                             </li>
                         {{/each}}
                     </ul>
@@ -48,23 +62,32 @@
             <aside class="previous-events">
                 <h2>Poprzednie spotkania</h2>
                 {{#checklength pages 2}}
-                <ul class="previous-events__list">
-                    {{#each pages}}
-                        {{#unless @first}}
-                            <li><a class="previous-events__link" href="{{url}}">
-                        <span>{{title}}</span><span class="previous-events__date">{{#if date}}<time datetime="{{date}}">{{date}}</time>{{else}}Brak daty{{/if}}</span>
-                        </a>
-                                <p class="previous-events__excerpt">{{excerpt}}</p>
-                            </li>
-                        {{/unless}}
-                    {{/each}}
-                </ul>
-                {{else}}
-                <p>Brak wcześniejszych spotkań</p>
+                    <ul class="previous-events__list">
+                        {{#each pages}}
+                            {{#unless @first}}
+                                <li>
+                                    <a class="previous-events__link" href="{{url}}">
+                                        <span>{{title}}</span>
+                                        <span class="previous-events__date">
+                                            {{#if date}}
+                                                <time datetime="{{date}}">{{date}}</time>
+                                            {{else}}Brak daty{{/if}}
+                                        </span>
+                                    </a>
+                                    <p class="previous-events__excerpt">{{excerpt}}</p>
+                                </li>
+                            {{/unless}}
+                        {{/each}}
+                    </ul>
+                    {{else}}
+                        <p>Brak wcześniejszych spotkań</p>
                 {{/checklength}}
             </aside>
         </main>
-        <footer class="footer"><small>Marek Sładczyk 2017</small></footer>
+        <footer class="footer">
+            <small>Marek Sładczyk 2017</small>
+        </footer>
     </div>
 </body>
+
 </html>
