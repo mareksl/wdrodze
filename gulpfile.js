@@ -52,7 +52,8 @@ Handlebars.registerHelper('address', function (input) {
   return addressStr;
 })
 Handlebars.registerHelper('address_google', function (input) {
-  return input.replace(/;/g, '+', 'g');
+  inputPlus = input.replace(/;/g, '+', 'g');
+  return encodeURI(inputPlus);
 })
 // uglify js and css
 gulp.task('useref', function () {
