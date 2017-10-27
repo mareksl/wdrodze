@@ -9,6 +9,15 @@
     <!--build:cssRe-->
     <link rel="stylesheet" href="../../css/main.css">
     <!--endbuild-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108818656-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108818656-1');
+    </script>
 </head>
 
 <body>
@@ -27,21 +36,29 @@
                 {{{ contents }}}</article>
             <aside class="artist-details">
                 {{#if photo}}
-                <div class="artist-details__photo">
-                <a href="img/photo.jpg"><img src="img/photo.jpg" alt="{{fullName this}}"></a>
-                </div>
+                    <div class="artist-details__photo">
+                        <a href="img/photo.jpg">
+                            <img src="img/photo.jpg" alt="{{fullName this}}">
+                        </a>
+                    </div>
                 {{/if}}
                 {{#if links}}
                     <h3>Kontakt</h3>
                     <ul class="artist-details__links">
                         {{#each links}}
-                            <li><a href="{{this}}">{{@key}}</a></li>
+                            <li>
+                                <a href="{{this}}">{{@key}}</a>
+                            </li>
                         {{/each}}
                     </ul>
                 {{/if}}
             </aside>
         </main>
-        <footer class="footer"><a href="../../">Wróć do strony głównej</a><small>Marek Sładczyk 2017</small></footer>
+        <footer class="footer">
+            <a href="../../">Wróć do strony głównej</a>
+            <small>Marek Sładczyk 2017</small>
+        </footer>
     </div>
 </body>
+
 </html>
