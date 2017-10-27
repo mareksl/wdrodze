@@ -62,7 +62,7 @@ gulp.task('useref', function () {
 gulp.task('pages', function () {
   gulp.src("src/pages/**.*")
     .pipe(htmlreplace({
-      'cssRe': '../../css/styles.min.css',
+      'cssRe': '../css/styles.min.css',
     }))
     .pipe(gulp.dest('docs/pages'));
 });
