@@ -59,15 +59,15 @@
                 {{#if location}}
                     <h3>Miejsce</h3>
                     {{#if location.link}}
-                        <a href="{{location.link}}">
+                        <a class="event-details__link" href="{{location.link}}">
                     {{/if}}
                     {{#if location.logo}}
                         <img class="event-details__logo" src="../img/{{location.logo}}" alt="{{location.name}}" title="{{location.name}}">
                     {{else}}
                         <p>{{location.name}}</p>
-                    {{/if}}{{{address location.address}}}
+                    {{/if}}
                     {{#if location.link}}
-                        </a>
+                        </a><h4>Adres</h4><a href="https://www.google.com/maps/search/?api=1&query={{{address_google location.address}}}">{{{address location.address}}}</a>
                     {{/if}}
                 {{/if}}
                 {{#if sponsors}}
@@ -76,7 +76,7 @@
                         {{#each sponsors}}
                             <li>
                                 {{#if this.link}}
-                                    <a href="{{this.link}}">
+                                    <a class="event-details__link" href="{{this.link}}">
                                 {{/if}}
                                 {{#if this.logo}}
                                     <img class="event-details__logo" src="../img/{{this.logo}}" alt="{{this.name}}" title="{{this.name}}">
