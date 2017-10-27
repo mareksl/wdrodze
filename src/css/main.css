@@ -192,8 +192,7 @@ a {
   outline: none;
   text-decoration: none;
   color: #A82200;
-  transition: .2s;
-  display: inline-block; }
+  transition: .2s; }
   a:visited {
     color: #A82200; }
   a:hover, a:focus {
@@ -213,13 +212,26 @@ html {
   height: 100%; }
 
 body {
-  height: 100%;
-  background-color: #fff; }
+  height: 100%; }
 
 .wrapper {
   min-height: 100vh;
   display: flex;
-  flex-flow: column; }
+  flex-flow: column;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .wrapper::before {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url("../img/banner.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    filter: brightness(1.5) contrast(1.5) blur(0.5em); }
 
 .header {
   text-align: left;
@@ -313,15 +325,23 @@ body {
   .event-details__sponsors li {
     flex: 0 1 100%;
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    flex-flow: column;
     justify-content: flex-start; }
 
 .event-details__logo {
-  padding: .5rem;
+  padding: .5rem 0;
   width: auto;
   height: 100%;
-  max-height: 128px; }
+  max-height: 128px;
+  transition: .2s; }
+
+.event-details__link {
+  display: block;
+  margin: .5rem 0;
+  border-bottom: 4px solid;
+  border-color: transparent; }
+  .event-details__link:hover, .event-details__link:focus {
+    border-color: #A82200; }
 
 .event-artists {
   padding: 2vh 2vw;

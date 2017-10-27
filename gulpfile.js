@@ -10,6 +10,8 @@ var runSequence = require('run-sequence');
 var imagemin = require('gulp-imagemin');
 var htmlreplace = require('gulp-html-replace');
 var imageminJpegoptim = require('imagemin-jpegoptim');
+var imageminPngquant = require('imagemin-pngquant');
+
 
 
 
@@ -34,7 +36,7 @@ Handlebars.registerHelper('checklength', function (v1, v2, options) {
   return options.inverse(this);
 });
 
-Handlebars.registerHelper('address', function(input){
+Handlebars.registerHelper('address', function (input) {
   'use strict';
   const addressArr = input.split(';');
   let addressStr = `<p class="event-details__address vcard">`;
@@ -49,7 +51,9 @@ Handlebars.registerHelper('address', function(input){
   addressStr += `</p>`;
   return addressStr;
 })
-
+Handlebars.registerHelper('address_google', function (input) {
+  return input.replace(/;/g, '+', 'g');
+})
 // uglify js and css
 gulp.task('useref', function () {
   return gulp.src('src/*.html')
@@ -102,8 +106,10 @@ gulp.task('rootimagemin', function () {
   return gulp.src('src/img/*.*')
     .pipe(imagemin([imageminJpegoptim({
       progressive: true,
-      max: 90,
+      max: 50,
       stripAll: true
+    }), imageminPngquant({
+    quality: '65-80'
     })]))
     .pipe(gulp.dest('docs/img'));
 });

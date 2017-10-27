@@ -18,7 +18,6 @@
 
         gtag('config', 'UA-108818656-1');
     </script>
-
 </head>
 
 <body>
@@ -74,9 +73,9 @@
                         <a href="{{location.link}}">
                     {{/if}}
                     <p>{{location.name}}</p>
-                    {{{address location.address}}}
                     {{#if location.link}}
                         </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query={{{address_google location.address}}}">{{{address location.address}}}</a>
                     {{/if}}
                 {{/if}}
                 {{/with}}
