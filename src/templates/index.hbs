@@ -46,16 +46,28 @@
                     </ul>
                 {{/if}}
                 {{#if sponsors}}
-                    <h3>Sponsorzy</h3>
+                    <h3>Patronat</h3>
                     <ul class="latest-event__sponsors">
                         {{#each sponsors}}
                             <li>
                                 {{#if this.link}}
-                                    <a href="{{this.link}}">{{this.name}}</a>
+                                    <a href="{{this.link}}">{{this.name}}
+                                    </a>
                                 {{else}}{{this.name}}{{/if}}
                             </li>
                         {{/each}}
                     </ul>
+                {{/if}}
+                {{#if location}}
+                    <h3>Miejsce</h3>
+                    {{#if location.link}}
+                        <a href="{{location.link}}">
+                    {{/if}}
+                    <p>{{location.name}}</p>
+                    {{{address location.address}}}
+                    {{#if location.link}}
+                        </a>
+                    {{/if}}
                 {{/if}}
                 {{/with}}
             </article>
