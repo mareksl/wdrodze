@@ -33,15 +33,18 @@
                 <header>
                     {{#with pages.[0]}}
                         <a href="{{url}}">
-                            <h2>{{title}} -  {{location.city}}</h2>
+                            <h2>{{title}} - {{location.city}}</h2>
                             <p class="latest-event__date">
-
                                 {{#if date}}
                                     <time datetime="{{date.start}}">{{date.start}}</time>
+                                    {{#if date.finish}} –
+                                        <time datetime="{{date.finish}}">{{date.finish}}</time>
+                                    {{/if}}
                                 {{else}}Brak daty{{/if}}
                             </p>
                         </a>
-                </header>{{{contents}}}
+                </header>
+                <section class="latest-event__description">{{{contents}}}</section>
                 {{#if artists}}
                     <h3>Artyści</h3>
                     <ul class="latest-event__artists">
@@ -56,11 +59,15 @@
                 {{/if}}
                 {{#if sponsors}}
                     <h3>Patronat</h3>
-                    <ul class="latest-event__sponsors">
+                    <ul class="latest-event__sponsor-list">
                         {{#each sponsors}}
                             <li>
                                 {{#if this.link}}
-                                    <a href="{{this.link}}">{{this.name}}
+                                    <a class="latest-event__sponsor" href="{{this.link}}">
+                                        {{#if this.logo}}
+                                            <img class="latest-event__sponsor-logo" src="img/{{this.logo}}" alt="" title="{{this.name}}">
+                                        {{/if}}
+                                        <span>{{this.name}}</span>
                                     </a>
                                 {{else}}{{this.name}}{{/if}}
                             </li>

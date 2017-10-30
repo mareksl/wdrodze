@@ -41,46 +41,47 @@ h1 {
     font-size: 20vw;
     font-family: $heading;
     font-style: italic;
+    white-space: nowrap;
 }
 
 h2 {
-    font-size: calc(.8 * 4.209em);
+    font-size: calc(3.998em * 0.6);
 }
 
 h3 {
-    font-size: calc(.8 * 3.157em);
+    font-size: calc(2.827em * 0.6);
 }
 
 h4 {
-    font-size: calc(.8 * 2.369em);
+    font-size: calc(1.999em * 0.6);
 }
 
 h5 {
-    font-size: calc(.8 * 1.777em);
+    font-size: calc(1.414em * 0.6);
 }
 
 h6 {
-    font-size: calc(.8 * 1.333em);
+    font-size: calc(1em * 0.6);
 }
 
 @media screen and (min-width: 446px) {
     h1 {
-        font-size: 5.61em;
+        font-size: 5.653em;
     }
     h2 {
-        font-size: 4.209em;
+        font-size: 3.998em;
     }
     h3 {
-        font-size: 3.157em;
+        font-size: 2.827em;
     }
     h4 {
-        font-size: 2.369em;
+        font-size: 1.999em;
     }
     h5 {
-        font-size: 1.777em;
+        font-size: 1.414em;
     }
     h6 {
-        font-size: 1.333em;
+        font-size: 1em;
     }
 }
 
