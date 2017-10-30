@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://wdrodze.art/</loc>
-        <lastmod>2017-10-30T17:46:19.122Z</lastmod>
+        <lastmod>2017-10-30T22:01:16.068Z</lastmod>
     </url>
     <url>
         <loc>http://wdrodze.art/pages/2017-11-27.html</loc>
-        <lastmod>2017-10-30T17:46:19.129Z</lastmod>
+        <lastmod>2017-10-30T22:01:17.186Z</lastmod>
     </url>
     <url>
         <loc>http://wdrodze.art/artists/bach_alicja</loc>
-        <lastmod>2017-10-30T17:46:24.212Z</lastmod>
-    </url>
-    <url>
-        <loc>http://wdrodze.art/artists/gurlesen_kubra</loc>
-        <lastmod>2017-10-30T17:46:24.613Z</lastmod>
+        <lastmod>2017-10-30T22:01:17.235Z</lastmod>
     </url>
     <url>
         <loc>http://wdrodze.art/artists/gobart_yves</loc>
-        <lastmod>2017-10-30T17:46:24.227Z</lastmod>
+        <lastmod>2017-10-30T22:01:17.203Z</lastmod>
     </url>
     <url>
-        <loc>http://wdrodze.art/artists/ilkyaz_atilla</loc>
-        <lastmod>2017-10-30T17:46:24.192Z</lastmod>
+        <loc>http://wdrodze.art/artists/gurlesen_kubra</loc>
+        <lastmod>2017-10-30T22:01:17.438Z</lastmod>
     </url>
     <url>
         <loc>http://wdrodze.art/artists/ilkyaz_feyza</loc>
-        <lastmod>2017-10-30T17:46:24.249Z</lastmod>
+        <lastmod>2017-10-30T22:01:17.750Z</lastmod>
     </url>
     <url>
-        <loc>http://wdrodze.art/artists/otgun_cebrail</loc>
-        <lastmod>2017-10-30T17:46:24.601Z</lastmod>
+        <loc>http://wdrodze.art/artists/ilkyaz_atilla</loc>
+        <lastmod>2017-10-30T22:01:17.657Z</lastmod>
     </url>
     <url>
         <loc>http://wdrodze.art/artists/jackiewicz_alina</loc>
-        <lastmod>2017-10-30T17:46:24.588Z</lastmod>
+        <lastmod>2017-10-30T22:01:17.782Z</lastmod>
     </url>
     <url>
         <loc>http://wdrodze.art/artists/joppek_danuta</loc>
-        <lastmod>2017-10-30T17:46:24.473Z</lastmod>
+        <lastmod>2017-10-30T22:01:17.767Z</lastmod>
+    </url>
+    <url>
+        <loc>http://wdrodze.art/artists/otgun_cebrail</loc>
+        <lastmod>2017-10-30T22:01:17.830Z</lastmod>
+    </url>
+    <url>
+        <loc>http://wdrodze.art/artists/ozsalar_ahmet</loc>
+        <lastmod>2017-10-30T22:01:17.807Z</lastmod>
     </url>
 </urlset>
