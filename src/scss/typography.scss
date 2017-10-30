@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700|PT+Sans:700|PT+Serif');
-$heading: 'PT Sans Narrow';
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:700,700i|PT+Serif');
+$heading: 'Pt Sans';
 $subheading: 'Pt Sans';
 $text: 'Pt Serif';
 $color-body: #5b423b;
@@ -40,7 +40,7 @@ h6 {
 h1 {
     font-size: 20vw;
     font-family: $heading;
-    text-transform: uppercase;
+    font-style: italic;
 }
 
 h2 {

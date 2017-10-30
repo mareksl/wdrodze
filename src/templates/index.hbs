@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>W Drodze</title>
+    <title>W drodze</title>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/main.css">
     <!--endbuild-->
@@ -24,18 +24,18 @@
     <div class="wrapper">
         <header class="header">
             <a href="#">
-                <h1>W Drodze...</h1>
+                <h1>W drodze...</h1>
                 <p class="header__subtitle">cykl autorskich wystaw zbiorowych Danuty Joppek</p>
             </a>
         </header>
         <main class="main">
             <article class="latest-event">
                 <header>
-                    <h2>Najnowsze spotkanie</h2>
                     {{#with pages.[0]}}
                         <a href="{{url}}">
-                            <p class="latest-event__title">{{title}}</p>
+                            <h2>{{title}} -  {{location.city}}</h2>
                             <p class="latest-event__date">
+
                                 {{#if date}}
                                     <time datetime="{{date.start}}">{{date.start}}</time>
                                 {{else}}Brak daty{{/if}}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700|PT+Sans:700|PT+Serif");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:700,700i|PT+Serif");
 * {
   box-sizing: border-box; }
 
@@ -148,8 +148,8 @@ h6 {
 
 h1 {
   font-size: 20vw;
-  font-family: "PT Sans Narrow";
-  text-transform: uppercase; }
+  font-family: "Pt Sans";
+  font-style: italic; }
 
 h2 {
   font-size: calc(.8 * 4.209em); }
@@ -260,9 +260,6 @@ body {
   flex: 1 1 66%;
   border-left: 4px solid #A82200;
   padding: 2vh 2vw; }
-
-.latest-event__title {
-  font-weight: 900; }
 
 .latest-event__date {
   font-weight: 900;

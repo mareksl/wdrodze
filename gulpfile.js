@@ -12,6 +12,7 @@ var htmlreplace = require('gulp-html-replace');
 var imageminJpegoptim = require('imagemin-jpegoptim');
 var imageminPngquant = require('imagemin-pngquant');
 
+var sitemap = require('gulp-sitemap');
 
 
 
@@ -117,7 +118,7 @@ gulp.task('rootimagemin', function () {
 
 // build page
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref'], 'rootimagemin', 'imagemin',
+  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref'], 'rootimagemin', 'imagemin', 'sitemap',
     callback
   );
 });
@@ -289,5 +290,16 @@ gulp.task('regenerate_artists', function (callback) {
 function initList(list) {
   Data[list] = [];
 }
+
+gulp.task('sitemap', function () {
+    gulp.src('docs/**/*.html', {
+            read: false
+        })
+        .pipe(sitemap({
+            siteUrl: 'http://wdrodze.art/'
+        }))
+        .pipe(gulp.dest('./docs'));
+});
+
 // default task
 gulp.task('default', ['browser-sync']);
