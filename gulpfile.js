@@ -118,7 +118,7 @@ gulp.task('rootimagemin', function () {
 
 // build page
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref'], 'rootimagemin', 'imagemin', 'sitemap',
+  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref', 'favicon'], 'rootimagemin', 'imagemin', 'sitemap',
     callback
   );
 });
@@ -301,5 +301,9 @@ gulp.task('sitemap', function () {
         .pipe(gulp.dest('./docs'));
 });
 
+gulp.task('favicon', function () {
+  gulp.src('src/favicon.ico')
+  .pipe(gulp.dest('docs'));
+});
 // default task
 gulp.task('default', ['browser-sync']);
