@@ -1,7 +1,7 @@
 {"firstName": "Alina",
 "lastName": "Jackiewicz",
 "photo":true,
-"links":{"Email":"mailto:alina.jackiewicz.ka@gmail.com"}}
+"links":{"E-Mail":"mailto:alina.jackiewicz.ka@gmail.com"}}
 ---
 Studiowała w Państwowej Wyższej Szkole Sztuk Plastycznych w Gdańsku na wydziale Malarstwa, Grafiki i Rzeźby, kierunek malarstwo. Dyplom uzyskała w 1979 roku. Jest profesorem w Akademii Sztuk Pięknych w Gdańsku, gdzie prowadzi pracownię Grafiki Artystycznej wklęsłodruku. Uprawia grafikę artystyczną, rysunek, malarstwo i fotografię przyrody. Autorka 37 wystaw indywidualnych, uczestniczyła w ponad 140 wystawach zbiorowych w kraju i za granicą. Laureatka 34 nagród i wyróżnień na wystawach i konkursach okręgowych, ogólnopolskich i międzynarodowych.
 

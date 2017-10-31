@@ -94,8 +94,8 @@ body {
 }
 
 blockquote {
-    padding: 0.5em 1em;
-    // border-left: 1px solid $color-primary;
+    padding: .5em;
+    font-style: italic;
 }
 
 .latest-event__sponsor-list {
@@ -233,6 +233,9 @@ blockquote {
         height: 256px;
         width: auto;
         border: 2px solid $color_primary;
+        &:hover {
+            border-color: $color-secondary;
+        }
     }
 }
 
@@ -262,5 +265,8 @@ blockquote {
     img {
         min-width: 100%;
         flex: none;
+    }
+    &:hover {
+        border-color: $color-secondary;
     }
 }

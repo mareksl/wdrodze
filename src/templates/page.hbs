@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="{{title}}, {{location.city}} {{date.start}}. {{subtitle}}">
     <title>W drodze: {{ title }}</title>
     <!--build:cssRe-->
     <link rel="stylesheet" href="../css/main.css">
@@ -37,7 +38,10 @@
                     {{/if}}
                     <p class="event-details__date">
                         {{#if date}}
-                            <time datetime="{{ date.start }}">{{ date.start }}</time>
+                            <time datetime="{{date.start}}">{{date.start}}</time>
+                            {{#if date.finish}} –
+                                <time datetime="{{date.finish}}">{{date.finish}}</time>
+                            {{/if}}
                         {{else}}Brak daty{{/if}}
                     </p>
                 </header>
@@ -67,7 +71,9 @@
                         <p>{{location.name}}</p>
                     {{/if}}
                     {{#if location.link}}
-                        </a><h4>Adres</h4><a href="https://www.google.com/maps/search/?api=1&query={{{address_google location.address}}}">{{{address location.address}}}</a>
+                        </a>
+                        <h4>Adres</h4>
+                        <a href="https://www.google.com/maps/search/?api=1&query={{{address_google location.address}}}">{{{address location.address}}}</a>
                     {{/if}}
                 {{/if}}
                 {{#if sponsors}}

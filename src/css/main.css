@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:700,700i|PT+Serif");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:700,700i|PT+Serif:400,400i,700,700i");
 * {
   box-sizing: border-box; }
 
@@ -284,7 +284,8 @@ body {
     column-gap: 2em; } }
 
 blockquote {
-  padding: 0.5em 1em; }
+  padding: .5em;
+  font-style: italic; }
 
 .latest-event__sponsor-list {
   width: 100%;
@@ -392,6 +393,8 @@ blockquote {
     height: 256px;
     width: auto;
     border: 2px solid #A82200; }
+    .artist-description img:hover {
+      border-color: #007da3; }
 
 .artist-details {
   padding: 2vh 2vw;
@@ -415,3 +418,5 @@ blockquote {
   .artist-details__photo img {
     min-width: 100%;
     flex: none; }
+  .artist-details__photo:hover {
+    border-color: #007da3; }
