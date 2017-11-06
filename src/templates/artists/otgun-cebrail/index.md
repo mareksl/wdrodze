@@ -1,7 +1,8 @@
 {"firstName": "Cebrail",
 "lastName": "Ötgün",
 "photo":false,
-"links":false}
+"links":false,
+"lang":"en"}
 ---
 He was born in 1962 in Iğdır. He completed his primary and secondary education here. He graduated from Hacettepe University Fine Arts Faculty Painting Department in 1987. In 1990, he completed his master's degree at Hacettepe University. He completed his doctorate at Marmara University (1995). Together with his six friends, he founded Hangar Art Initiative in 1992 and Hangar Art Book published 6 issues. He worked as a teaching assistant at İnönü University between 1988-1995 and at the Painting Department of Mersin University Faculty of Fine Arts between 1995 and 2006 between 2006 and 2013 at Gazi University Fine Arts Faculty Painting Department. 
 

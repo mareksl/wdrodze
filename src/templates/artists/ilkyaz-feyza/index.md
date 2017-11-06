@@ -1,7 +1,8 @@
 {"firstName": "Feyza",
 "lastName": "İlkyaz",
 "photo":true,
-"links":{"E-Mail":"mailto:feyzailkyaz@gmail.com","Strona internetowa":"http://www.cargocollective.com"}}
+"links":{"E-Mail":"mailto:feyzailkyaz@gmail.com","Strona internetowa":"http://www.cargocollective.com"},
+"lang":"en"}
 ---
 * 1977 Born in Ankara, Turkey
 * 1995-99 Gazi University, V.E.F. Painting Department 

@@ -25,6 +25,13 @@ var rename = require('gulp-rename');
 
 var Data = {};
 
+Handlebars.registerHelper('if_eq', function (a, b, opts) {
+  if (a == b) // Or === depending on your needs
+    return opts.fn(this);
+  else
+    return opts.inverse(this);
+});
+
 Handlebars.registerHelper('fullName', function (person) {
   return person.firstName + " " + person.lastName;
 });
@@ -168,7 +175,7 @@ gulp.task('generate_pages', function () {
             console.log('Processed: ' + data.name);
             // replace file contents without meta data
             contents = contents.slice(index + 3, contents.length);
-            data.excerpt = contents.slice(0, 139);
+            // data.excerpt = contents.slice(0, 139);
             file.contents = new Buffer(contents, "utf-8");
           }
         }))
