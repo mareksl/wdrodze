@@ -310,23 +310,26 @@ blockquote {
   padding: 2vh 2vw;
   flex: 1 1 33%; }
 
-.previous-events__list li {
-  display: flex;
-  align-items: baseline;
-  padding: .4rem 0; }
+.previous-events__list {
+  padding: 1rem 0; }
+  .previous-events__list li {
+    display: flex;
+    align-items: baseline;
+    padding: .5rem 0; }
 
 .previous-events__link {
+  width: 100%;
   display: flex;
-  flex-flow: column;
-  white-space: nowrap;
-  margin-right: 1rem; }
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  white-space: nowrap; }
 
 .previous-events__date {
-  padding: .4rem 0;
-  font-style: italic; }
+  font-style: italic;
+  padding-right: 1rem; }
 
-.previous-events__excerpt:after {
-  content: '...'; }
+.previous-events__title {
+  padding-right: 1rem; }
 
 .event-details {
   border-left: 4px solid #A82200;

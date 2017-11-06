@@ -90,20 +90,20 @@
             </article>
             <aside class="previous-events">
                 <h2>Poprzednie spotkania</h2>
-                {{#checklength pages 2}}
+                {{#checklength pages 1}}
                     <ul class="previous-events__list">
                         {{#each pages}}
                             {{#unless @first}}
                                 <li>
                                     <a class="previous-events__link" href="{{url}}">
-                                        <span>{{title}}</span>
                                         <span class="previous-events__date">
                                             {{#if date}}
-                                                <time datetime="{{date}}">{{date}}</time>
+                                                <time datetime="{{date.start}}">{{date.start}}:</time>
                                             {{else}}Brak daty{{/if}}
                                         </span>
+                                        <span class="previous-events__title">{{title}}</span>
+                                        <span>{{location.city}}</span>
                                     </a>
-                                    <p class="previous-events__excerpt">{{excerpt}}</p>
                                 </li>
                             {{/unless}}
                         {{/each}}

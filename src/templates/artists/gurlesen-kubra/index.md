@@ -1,7 +1,8 @@
 {"firstName": "Kübra",
 "lastName": "Gürleşen",
 "photo":true,
-"links":{"E-Mail":"mailto:kubragurlesen@gmail.com","Strona internetowa":"http://www.cargocollective.com/kubragurlesen"}}
+"links":{"E-Mail":"mailto:kubragurlesen@gmail.com","Strona internetowa":"http://www.cargocollective.com/kubragurlesen"},
+"lang":"en"}
 ---
 She was born in 1985, in Ankara. She pursues her education of Proficiency in Art at Gazi University, Institute of Fine Arts, Department of Painting, in Ankara, Turkey.
 

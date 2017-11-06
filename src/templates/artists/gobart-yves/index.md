@@ -1,7 +1,8 @@
 {"firstName": "Yves",
 "lastName": "Gobart",
 "photo":true,
-"links":false}
+"links":false,
+"lang":"en"}
 ---
 * 1999 Graduated from the National Fine Arts School of Paris.
 * 1995 Diploma from the National Superior Applied Arts School, ENSAAMA Olivier de Serres, Paris.
