@@ -147,23 +147,29 @@ blockquote {
     font-style: italic;
     padding-right: 1rem;
 }
+
 .previous-events__title {
     padding-right: 1rem;
 }
 
-.event-details {
+.event-main {
     border-left: 4px solid $color-primary;
     padding: 2vh 2vw;
     flex: 1 1 66%;
 }
 
-.event-details__subtitle {
+.event-main__subtitle {
     font-weight: 900;
 }
 
-.event-details__date {
+.event-main__date {
     font-weight: 900;
     font-style: italic;
+}
+
+.event-details {
+    padding: 2vh 2vw;
+    flex: 1 1 33%;
 }
 
 .event-details__address {
@@ -204,8 +210,47 @@ blockquote {
 }
 
 .event-artists {
-    padding: 2vh 2vw;
-    flex: 1 1 33%;
+    li {
+        display: inline;
+        &:after {
+            content: ' | ';
+        }
+        &:last-child {
+            &:after {
+                content: '';
+            }
+        }
+    }
+}
+
+.event-gallery__list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.event-gallery__item {
+    flex: 0 1 20%;
+    overflow: hidden;
+}
+
+.event-gallery__link {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 1rem;
+    border-bottom: 4px solid;
+    border-color: transparent;
+    &:hover,
+    &:focus {
+        border-color: $color-primary; // box-shadow: -4px 0 $color-primary;
+    }
+}
+
+.event-gallery__image {
+width: 100%;
 }
 
 .artist-description {

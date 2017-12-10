@@ -73,9 +73,9 @@ gulp.task('useref', function () {
 });
 // copy generated pages to docs
 gulp.task('pages', function () {
-  gulp.src("src/pages/**.*")
+  gulp.src("src/pages/*/**.*")
     .pipe(htmlreplace({
-      'cssRe': '../css/styles.min.css',
+      'cssRe': '../../css/styles.min.css',
     }))
     .pipe(gulp.dest('docs/pages'));
 });
@@ -96,7 +96,7 @@ gulp.task('clean:docs', function () {
 // clean pages folder
 gulp.task('clean:pages', function () {
   initList('pages');
-  return del.sync('src/pages/*.html');
+  return del.sync('src/pages/*/*.html');
 });
 gulp.task('clean:artists', function () {
   initList('artists');
@@ -111,6 +111,15 @@ gulp.task('imagemin', function () {
     })]))
     .pipe(gulp.dest('docs/artists'));
 });
+gulp.task('galleries', function () {
+  return gulp.src('src/pages/*/img/*.*')
+    .pipe(imagemin([imageminJpegoptim({
+      progressive: true,
+      max: 90,
+      stripAll: true
+    })]))
+    .pipe(gulp.dest('docs/pages'));
+});
 gulp.task('rootimagemin', function () {
   return gulp.src('src/img/*.*')
     .pipe(imagemin([imageminJpegoptim({
@@ -118,14 +127,14 @@ gulp.task('rootimagemin', function () {
       max: 50,
       stripAll: true
     }), imageminPngquant({
-    quality: '65-80'
+      quality: '65-80'
     })]))
     .pipe(gulp.dest('docs/img'));
 });
 
 // build page
 gulp.task('build', function (callback) {
-  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref', 'favicon'], 'rootimagemin', 'imagemin', 'sitemap',
+  runSequence('clean:docs', 'sass', 'regenerate', 'regenerate_artists', ['pages', 'artists', 'useref', 'favicon'], 'rootimagemin', 'imagemin', 'galleries', 'sitemap',
     callback
   );
 });
@@ -156,7 +165,7 @@ gulp.task('generate_pages', function () {
       var template = Handlebars.compile(file.contents.toString());
 
       // now read all the pages from the pages directory
-      return gulp.src('src/templates/pages/**.md')
+      return gulp.src('src/templates/pages/*/index.md')
         .pipe(tap(function (file) {
           // use path library to get file name
           var name = path.basename(file.path, ".md");
@@ -225,7 +234,7 @@ gulp.task('generate_artists', function () {
             // add name to meta data for lookup
             data.name = name;
             // add url to our meta data
-            data.url = "pages/" + file.relative.replace(".md", ".html");
+            data.url = "artists/" + file.relative.replace(".md", ".html");
             // save meta data into object outside stream
             Data.artists.unshift(data);
             console.log('Processed: ' + data.name);
@@ -299,18 +308,18 @@ function initList(list) {
 }
 
 gulp.task('sitemap', function () {
-    gulp.src('docs/**/*.html', {
-            read: false
-        })
-        .pipe(sitemap({
-            siteUrl: 'http://wdrodze.art/'
-        }))
-        .pipe(gulp.dest('./docs'));
+  gulp.src('docs/**/*.html', {
+      read: false
+    })
+    .pipe(sitemap({
+      siteUrl: 'http://wdrodze.art/'
+    }))
+    .pipe(gulp.dest('./docs'));
 });
 
 gulp.task('favicon', function () {
   gulp.src('src/favicon.ico')
-  .pipe(gulp.dest('docs'));
+    .pipe(gulp.dest('docs'));
 });
 // default task
 gulp.task('default', ['browser-sync']);
