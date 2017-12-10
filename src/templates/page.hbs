@@ -8,7 +8,7 @@
     <meta name="description" content="{{title}}, {{location.city}} {{date.start}}. {{subtitle}}">
     <title>W drodze: {{ title }}</title>
     <!--build:cssRe-->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../../css/main.css">
     <!--endbuild-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108818656-1"></script>
@@ -24,19 +24,19 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <a href="../">
+            <a href="../../">
                 <h1>W drodze...</h1>
                 <p class="header__subtitle">cykl autorskich wystaw zbiorowych Danuty Joppek</p>
             </a>
         </header>
         <main class="main">
-            <article class="event-details">
+            <article class="event-main">
                 <header>
                     <h2 id="tytul">{{ title }} - {{location.city}}</h2>
                     {{#if subtitle}}
-                        <p class="event-details__subtitle">{{ subtitle }}</p>
+                        <p class="event-main__subtitle">{{ subtitle }}</p>
                     {{/if}}
-                    <p class="event-details__date">
+                    <p class="event-main__date">
                         {{#if date}}
                             <time datetime="{{date.start}}">{{date.start}}</time>
                             {{#if date.finish}} –
@@ -44,29 +44,46 @@
                             {{/if}}
                         {{else}}Brak daty{{/if}}
                     </p>
+                    <a href="#galeria">Przejdź do galerii zdjęć</a>
                 </header>
                 {{{ contents }}}
                 {{#if artists}}
-                    <h3 id="artysci">Artyści</h3>
-                    <ul>
-                        {{#each artists}}
-                            <li>
-                                {{#if this.page}}
-                                    <a href="../artists/{{this.page}}/">{{this.name}}</a>
-                                {{else}}{{this.name}}{{/if}}
-                            </li>
-                        {{/each}}
-                    </ul>
+                    <section>
+                        <h3 id="artysci">Artyści</h3>
+                        <ul class="event-artists">
+                            {{#each artists}}
+                                <li>
+                                    {{#if this.page}}
+                                        <a href="../../artists/{{this.page}}/">{{this.name}}</a>
+                                    {{else}}{{this.name}}{{/if}}
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                {{/if}}
+                {{#if gallery}}
+                    <section id="galeria" class="event-gallery">
+                        <h3>Galeria Zdjęć</h3>
+                        <ul class="event-gallery__list">
+                            {{#each gallery}}
+                                <li class="event-gallery__item">
+                                    <a class="event-gallery__link" href="img/{{this.file}}">
+                                        <img class="event-gallery__image" src="img/{{this.file}}" alt="{{this.title}}">
+                                    </a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </section>
                 {{/if}}
             </article>
-            <aside class="event-artists">
+            <aside class="event-details">
                 {{#if location}}
                     <h3>Miejsce</h3>
                     {{#if location.link}}
                         <a class="event-details__link" href="{{location.link}}">
                     {{/if}}
                     {{#if location.logo}}
-                        <img class="event-details__logo" src="../img/{{location.logo}}" alt="{{location.name}}" title="{{location.name}}">
+                        <img class="event-details__logo" src="../../img/{{location.logo}}" alt="{{location.name}}" title="{{location.name}}">
                     {{else}}
                         <p>{{location.name}}</p>
                     {{/if}}
@@ -85,7 +102,7 @@
                                     <a class="event-details__link" href="{{this.link}}">
                                 {{/if}}
                                 {{#if this.logo}}
-                                    <img class="event-details__logo" src="../img/{{this.logo}}" alt="{{this.name}}" title="{{this.name}}">
+                                    <img class="event-details__logo" src="../../img/{{this.logo}}" alt="{{this.name}}" title="{{this.name}}">
                                 {{else}}{{this.name}}
                                 {{/if}}
                                 {{#if this.link}}
@@ -98,7 +115,7 @@
             </aside>
         </main>
         <footer class="footer">
-            <a href="../">Wróć do strony głównej</a>
+            <a href="../../">Wróć do strony głównej</a>
             <small>Marek Sładczyk 2017</small>
         </footer>
     </div>
